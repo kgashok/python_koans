@@ -14,13 +14,13 @@ class AboutAsserts(Koan):
         #
         #   http://bit.ly/about_asserts
 
-        self.assertTrue(False) # This should be true
+        self.assertTrue(False) # This should be True
 
     def test_assert_with_message(self):
         """
         Enlightenment may be more easily achieved with appropriate messages.
         """
-        self.assertTrue(False, "This should be true -- Please fix this")
+        self.assertTrue(False, "This should be True -- Please fix this")
 
     def test_fill_in_values(self):
         """
@@ -60,17 +60,17 @@ class AboutAsserts(Koan):
 
         # Sometimes we will ask you what the class type of an object is.
         #
-        # For example, contemplate the text string "naval". What is its class type?
+        # For example, contemplate the text string "navel". What is its class type?
         # The koans runner will include this feedback for this koan:
         #
         #   AssertionError: '-=> FILL ME IN! <=-' != <type 'str'>
         #
-        # So "naval".__class__ is equal to <type 'str'>? No not quite. This
+        # So "navel".__class__ is equal to <type 'str'>? No not quite. This
         # is just what it displays. The answer is simply str.
         #
         # See for yourself:
 
-        self.assertEqual(__, "naval".__class__) # It's str, not <type 'str'>
+        self.assertEqual(__, "navel".__class__) # It's str, not <type 'str'>
 
         # Need an illustration? More reading can be found here:
         #

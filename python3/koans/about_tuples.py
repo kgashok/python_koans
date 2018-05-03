@@ -9,16 +9,17 @@ class AboutTuples(Koan):
         self.assertEqual(__, count_of_three[2])
 
     def test_tuples_are_immutable_so_item_assignment_is_not_possible(self):
-        count_of_three =  (1, 2, 5)
+
+        count_of_three = (1, 2, 5)
         try:
             count_of_three[2] = "three"
         except TypeError as ex:
             msg = ex.args[0]
 
-        # Note, assertRegexpMatches() uses regular expression pattern matching,
+        # Note, assertRegex() uses regular expression pattern matching,
         # so you don't have to copy the whole message.
 
-        self.assertRegexpMatches(msg, __)
+        self.assertRegex(msg, __)
 
     def test_tuples_are_immutable_so_appending_is_not_possible(self):
         count_of_three =  (1, 2, 5)
@@ -38,7 +39,8 @@ class AboutTuples(Koan):
     def test_tuples_of_one_look_peculiar(self):
         self.assertEqual(__, (1).__class__)
         self.assertEqual(__, (1,).__class__)
-        self.assertEqual(__, ("Hello comma!", ))
+        self.assertEqual(__, ("I'm a tuple",))
+        self.assertEqual(__, ("Not a tuple"))
 
     def test_tuple_constructor_can_be_surprising(self):
         self.assertEqual(__, tuple("Surprise!"))
@@ -63,6 +65,3 @@ class AboutTuples(Koan):
 
         self.assertEqual(__, locations[2][0])
         self.assertEqual(__, locations[0][1][2])
-
-
-

@@ -17,11 +17,11 @@ class AboutControlStatements(Koan):
         if True:
             result = 'true value'
         self.assertEqual(__, result)
-        
+
     def test_if_then_elif_else_statements(self):
         if False:
             result = 'first value'
-        elif True: 
+        elif True:
             result = 'true value'
         else:
             result = 'default value'
@@ -65,7 +65,7 @@ class AboutControlStatements(Koan):
             ("Lancelot", "Blue"),
             ("Galahad", "I don't know!"),
             ("Robin", "Blue! I mean Green!"),
-            ("Arthur", "Is that an African Swallow or Amazonian Swallow?")
+            ("Arthur", "Is that an African Swallow or European Swallow?")
         ]
         result = []
         for knight, answer in round_table:
@@ -73,8 +73,8 @@ class AboutControlStatements(Koan):
 
         text = __
 
-        self.assertRegexpMatches(result[2], text)
+        self.assertRegex(result[2], text)
 
-        self.assertNoRegexpMatches(result[0], text)
-        self.assertNoRegexpMatches(result[1], text)
-        self.assertNoRegexpMatches(result[3], text)
+        self.assertNotRegex(result[0], text)
+        self.assertNotRegex(result[1], text)
+        self.assertNotRegex(result[3], text)

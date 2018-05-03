@@ -8,7 +8,7 @@ Python Koans
 Python Koans is a port of Edgecase's "Ruby Koans" which can be found
 at http://rubykoans.com/.
 
-.. image:: http://i442.photobucket.com/albums/qq150/gregmalcolm/PythonKoansScreenshot.png
+.. image:: https://user-images.githubusercontent.com/2614930/28401740-ec6214b2-6cd0-11e7-8afd-30ed3102bfd6.png
 
 Python Koans is an interactive tutorial for learning the Python programming
 language by making tests pass.
@@ -63,7 +63,7 @@ You can download Python from here:
     http://www.python.org/download
 
 After installing Python make sure the folder containing the python executable
-is in the system path. In other words, you need to be able to be able to run
+is in the system path. In other words, you need to be able to run
 Python from a command console. With Python 2 it will be called `python`
 or `python.exe` depending on the operating system. For Python 3 it will either
 be `python3` or for windows it will be `python.exe`.
@@ -99,7 +99,7 @@ or::
 In my case I'm using Python 3 with windows, so I fire up my command
 shell (cmd.exe) and run this:
 
-.. image:: http://i442.photobucket.com/albums/qq150/gregmalcolm/GettingStarted.png
+.. image:: https://user-images.githubusercontent.com/2614930/28401747-f723ff00-6cd0-11e7-9b9a-a6993b753cf6.png
 
 Apparently a test failed::
 
@@ -122,8 +122,44 @@ expected value should be. For example::
 This is where the Python Command Line can come in handy. In this case I can
 fire up the command line, recreate the scenario and run queries:
 
-.. image:: http://i442.photobucket.com/albums/qq150/gregmalcolm/DebuggingPython.png
+.. image:: https://user-images.githubusercontent.com/2614930/28401750-f9dcb296-6cd0-11e7-98eb-c20318eada33.png
 
+Sniffer Support
+---------------
+
+Sniffer allows you to run the tests continuously. If you modify any files files
+in the koans directory, it will rerun the tests.
+
+To set this up, you need to install sniffer::
+
+    $ pip install sniffer
+
+You should also run one of these libraries depending on your system. This will
+automatically trigger sniffer when a file changes, otherwise sniffer will have
+to poll to see if the files have changed.
+
+On Linux::
+
+    $ pip install pyinotify
+
+On Windows::
+
+    $ pip install pywin32
+    
+(If that failed, try::
+    
+    $ pip install pypiwin32
+)
+
+On Mac OS X::
+
+    $ pip install MacFSEvents
+
+Once it is set up, you just run::
+
+    $ sniffer
+
+Just modify one of the koans files and you'll see that the tests are triggered automatically. Sniffer is controlled by `scent.py`
 
 Getting the Most From the Koans
 -------------------------------
